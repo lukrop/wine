@@ -4836,6 +4836,9 @@ void draw_primitive(struct wined3d_device *device, const struct wined3d_state *s
     unsigned int i, idx_size = 0;
     const void *idx_data = NULL;
 
+    // don't draw primitives
+    return;
+
     if (!parameters->indirect && !parameters->u.direct.index_count)
         return;
 
